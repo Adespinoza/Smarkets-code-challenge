@@ -8,7 +8,7 @@ import EventContainer from '../containers/EventContainer';
 
 function App() {
   return (
-    <div>
+    <div className="App">
     	<Header />
     	
     	<Route exact path="/" component={EventContainer} />

@@ -1,4 +1,8 @@
 import React from 'react';
+import { Empty } from 'antd';
+
+import { getPopularEvents } from '../utils/eventsAPI';
+import EventList from '../components/EventList/EventList';
 
 class EventContainer extends React.Component {
 	constructor(props) {
@@ -9,15 +13,18 @@ class EventContainer extends React.Component {
 		}
 	}
 
-	componentWillMount() {
-		
+	componentDidMount() {
+		getPopularEvents().then(res =>
+			this.setState={
+				events: res.data.popular_event_ids,
+				loading: false,
+			}).catch(err => {
+				this.setState({err, loading: true})	
+			})
 	}
 
 	render() {
-		return(
-			<div>
-			</div>
-		);
+		return((this.state.loading) ? <Empty /> : <EventList />);
 	}
 }
 
