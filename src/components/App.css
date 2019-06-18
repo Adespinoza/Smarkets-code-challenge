@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.Divider {
+  padding: 3.3em;
+}

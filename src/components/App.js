@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
     	<Header />
-
+    	<div className="Divider"/>
     	<Route exact path="/" component={EventContainer} />
     	<Route exact path="/events/:id" component={EventInfoContainer} />
     </div>

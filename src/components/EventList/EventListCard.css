@@ -1,0 +1,8 @@
+.Card {
+	width: 300px;
+	height:350px;
+	overflow-y:scroll;
+	display: inline-block; 
+	word-wrap: break-word;
+	margin: 2em;
+}

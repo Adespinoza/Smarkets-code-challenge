@@ -34,6 +34,7 @@ class EventInfoContainer extends React.Component {
 				<p>{this.state.details.special_rules}</p>
 				<Tag color="volcano">{this.state.details.type}</Tag>
 	    		<Tag color="green">{this.state.details.state}</Tag>
+	    		<Tag color="blue">{this.state.details.slug}</Tag>
 			</div>
 		);
 	}
