@@ -14,17 +14,19 @@ class EventContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		getPopularEvents().then(res =>
-			this.setState={
+		getPopularEvents().then(res => {
+			console.log(res);
+			this.setState({
 				events: res.data.popular_event_ids,
 				loading: false,
-			}).catch(err => {
-				this.setState({err, loading: true})	
 			})
+		}).catch(err =>
+			this.setState({err, loading: true})
+		)
 	}
 
 	render() {
-		return((this.state.loading) ? <Empty /> : <EventList />);
+		return((this.state.loading) ? <Empty /> : <EventList popularEvents = {this.state.events}/>);
 	}
 }
 

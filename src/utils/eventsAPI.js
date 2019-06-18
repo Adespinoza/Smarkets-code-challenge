@@ -10,3 +10,12 @@ export async function getPopularEvents() {
 		throw new Error('Failed to contact API: ', err)
 	}
 }
+
+// Returns object of eventInfo from eventIds
+export async function getEventInfo(eventIds) {
+	try {
+		return axios.get(`/events/${eventIds.join(',')}/`);
+	} catch (err) {
+		throw new Error('Failed to contact API: ', err)
+	}
+}
