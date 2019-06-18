@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import logo from '../../logo.svg';
 import './Header.css';
 
 const Header = (props) => {
 	return( 
-		<div className = "Header">
-			<img src={logo} className="logo" alt="logo" />
-		</div>
+		<Link to={`/`}>
+			<div className = "Header">
+				<img src={logo} className="logo" alt="logo" />
+			</div>
+		</Link>
 	)
 }
 

@@ -6,13 +6,16 @@ import 'antd/dist/antd.css';
 
 import Header from './Header/Header';
 import EventContainer from '../containers/EventContainer';
+import EventInfoContainer from '../containers/EventInfoContainer';
+
 
 function App() {
   return (
     <div className="App">
     	<Header />
-    	
+
     	<Route exact path="/" component={EventContainer} />
+    	<Route exact path="/events/:id" component={EventInfoContainer} />
     </div>
   );
 }

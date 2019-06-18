@@ -24,7 +24,7 @@ class EventList extends React.Component {
 	renderList = () => {
 		return(
 			this.state.details.map(event => 
-				<EventListCard 
+				<EventListCard
 					key={event.slug}
 					name={event.name}
 					description={event.description}

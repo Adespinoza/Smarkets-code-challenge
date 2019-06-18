@@ -3,9 +3,10 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://cors-anywhere.herokuapp.com/https://api.smarkets.com/v3';
 
 // Return object of popular event ids 
+// limit is set to 25 events
 export async function getPopularEvents() {
 	try {
-		return axios.get(`/popular/event_ids/?limit=50`);
+		return axios.get(`/popular/event_ids/?limit=25`);
 	} catch (err) {
 		throw new Error('Failed to contact API: ', err)
 	}
