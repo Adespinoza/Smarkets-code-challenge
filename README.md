@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Time Completed: ~3 hours 30 minutes
 
-I completed the coding challenge a little over 3 hours, with a one hour break. 
+I completed the coding challenge a little over 3 hours.
 
 ## Set-Up Instructions
 
@@ -26,6 +26,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## To Do List
 Here are some things I didn't get to, but would love to if I had more time:
 
+- Implement React/Redux to assist in passing information around from states
+- Create test files to test components and containers
+- Limit the number of times API is being called to decrease latency on client side browser
 - Fix styling on `EventInfoContainer` to be consistent
 - Account for missing information from API in display of `EventContainer` and in `EventInfoContainer`
 - Refactor code to fix redundancies (a lot of copying was done in the making of this project).
